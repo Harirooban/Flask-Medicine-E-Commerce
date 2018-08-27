@@ -1,0 +1,56 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>add</title>
+			<script src="{{ url_for('static', filename = 'js/jquery.js') }}"></script>
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'back.css') }}">
+			<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+			<script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+			<link href="{{ url_for('static', filename = 'font-awesome-4.7.0/css/font-awesome.min.css') }} " rel="stylesheet">
+	</head>
+	<body>
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron text-center" style="color:blue">
+				<h3 style="font-size:35px">ADD ITEMS</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6" id="form">
+			<h1 style="color:blue">Enter Item Details</h1></br>
+			<form  action="/addItem" method="POST" enctype="multipart/form-data" >
+				<div class="form-group">
+					<input type="text" name="name" class="form-control" placeholder="Product Name">
+				</div>
+				<div class="form-group">
+					<input type="text" name="price" class="form-control" placeholder="Product Price">
+				</div>
+				<div class="form-group">
+					<textarea name="description" class="form-control" row="3" placeholder="Product Descriptions"></textarea>
+				</div>
+				<div class="form-group">
+					Upload a image Here :<input type="file" class="form-control" name="image"><br>
+				</div>
+				<div class="form-group">
+					Select Category:
+					<select name="category">
+						{% for row in categories %}
+						<option value="{{ row[0] }}">{{ row[1] }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary" name="Add">Add</button>
+				</div>	
+			</form>
+			</div>
+			<div class="col-sm-6"></div>
+		</div>
+		
+	</div>
+
+	</body>
+	</html>

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Appointment</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/back.css') }}">
+<script src="{{ url_for('static', filename = 'js/jquery.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'back.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+<script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+<link href="{{ url_for('static', filename = 'font-awesome-4.7.0/css/font-awesome.min.css') }} " rel="stylesheet">
+</head>
+<body id="bg9">
+	<section class="agile-header">
+		<div class="agile-heading">
+			<h1 style="color:black"><span style="color:red">Fix</span> Your<span style="color:red"> Appointment</span> Here..!</h1>
+		</div>
+		<div class="agile-form">
+			<form action="/appoint" method="POST">
+				<div class="agile-email">
+					<input type="text" name="name" placeholder="Patient's Name" required="">
+				</div>
+				<div class="agile-password">
+					<input type="text" name="phonenumber" placeholder="Patient's Phone Number" required="">
+				</div>
+				<div class="agile-gender">
+					<p>gender</p>
+					<div class="agile-mgender">
+						<input type="radio" name="gender" value="male">
+						<span>male</span>
+					</div>
+					<div class="agile-fgender">
+						<input type="radio" name="gender" value="female">
+						<span>female</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="agile-dob">
+					<p>date of birth</p>
+					<select class="agile-month">
+						<option value="" label="Month" selected="selected">Month</option>
+						<option>january</option>
+						<option>febuary</option>
+						<option>march</option>
+						<option>april</option>
+						<option>may</option>
+						<option>june</option>
+						<option>july</option>
+						<option>august</option>
+						<option>september</option>
+						<option>october</option>
+						<option>november</option>
+						<option>december</option>
+					</select>
+					<select class="agile-date">
+						<option value="" label="Date" selected="selected">Date</option>
+						<option>1</option>       
+						<option>2</option>       
+						<option>3</option>       
+						<option>4</option>       
+						<option>5</option>       
+						<option>6</option>       
+						<option>7</option>       
+						<option>8</option>       
+						<option>9</option>       
+						<option>10</option>       
+						<option>11</option>       
+						<option>12</option>       
+						<option>13</option>       
+						<option>14</option>       
+						<option>15</option>       
+						<option>16</option>       
+						<option>17</option>       
+						<option>18</option>       
+						<option>19</option>       
+						<option>20</option>       
+						<option>21</option>       
+						<option>22</option>       
+						<option>23</option>       
+						<option>24</option>       
+						<option>25</option>       
+						<option>26</option>       
+						<option>27</option>       
+						<option>28</option>       
+						<option>29</option>       
+						<option>30</option>       
+						<option>31</option>       
+					</select>
+					<select class="agile-year">
+						<option value="" label="Year" selected="selected">Year</option>
+						<option>2009</option>       
+						<option>2010</option>       
+						<option>2011</option>       
+						<option>2012</option>       
+						<option>2013</option>       
+						<option>2014</option>       
+						<option>2015</option>       
+						<option>2016</option>       
+						<option>2017</option>       
+						<option>2018</option>     
+					</select>
+					<div class="clear"></div>
+				</div></br>
+				<div class="agile-profile">
+					<p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Click</button> here to know about the Doctor's</p>
+						<div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Doctor's Details</h4>
+								</div>
+								<div class="modal-body">
+									<table class="table">
+										<thead class="thead-dark">
+											<tr>
+												<th scope="col">S.No</th>
+												<th scope="col">Doctor Name</th>
+												<th scope="col">Specilist In</th>
+												<th scope="col">Contact Number</th>
+											</tr>
+											<tbody>
+												<tr>
+													<th scope="row">1</th>
+													<td>Pradeepa</td>
+													<td>Child</td>
+													<td>789546212</td>
+												</tr>
+												<tr>
+														<th scope="row">2</th>
+														<td>Sharmi</td>
+														<td>ENT</td>
+														<td>786663158</td>
+												</tr>
+												
+													<tr>
+															<th scope="row">3</th>
+															<td>Maya</td>
+															<td>Heart</td>
+															<td>875662158</td>
+														</tr>
+														
+												<tr>
+														<th scope="row">4</th>
+														<td>Prema</td>
+														<td>Mental</td>
+														<td>756621581</td>
+													</tr>
+													
+												<tr>
+														<th scope="row">5</th>
+														<td>Deepa</td>
+														<td>Fever</td>
+														<td>975462158</td>
+													</tr>
+													
+												<tr>
+														<th scope="row">6</th>
+														<td>Kabila</td>
+														<td>All </td>
+														<td>884521623</td>
+													</tr>
+													
+												<tr>
+														<th scope="row">7</th>
+														<td>Pradeepa</td>
+														<td>Child</td>
+														<td>789546215</td>
+													</tr>
+											</tbody>
+										</thead>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+
+						</div>					
+				</div>
+				<div class="agile-profile">
+					<p>Looking For Doctor</p>
+					<input type="text" name="Doctor" placeholder="Enter Doctor Name">
+				</div>
+				<div class="agile-religion">
+					<p> Dignosis</p>
+					<input type="text" name="digo" placeholder="Enter Diseases Name">
+				</div>
+				<div class="agile-tongue">
+					<p>When It Started</p>
+					<input type="text"name="long" placeholder="How Long">
+				</div>
+				<div class="form-group">
+					<p>Book your timing</p>
+					<input type="datetime-local" class="form-control" name="timing" >
+				</div>
+				<div class="agile-submit">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+		
+	</section>
+
+</body>
+</html>

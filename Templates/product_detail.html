@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="container">
+		<div class="row text-center">
+
+                <h2> Available {{categoryName}} Products Are</h2></br>
+				<div class="table-responsive">
+                {% for itemData in data %}
+                <table class="table" id="cat-table">	
+                    <tr>
+                        {% for row in itemData %}
+                        <td>
+                            {{row[1]}}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    
+                    <tr>
+                        {% for row in itemData %}
+                        <td>
+                            {{row[2]}}
+                        </td>
+                        {% endfor %}
+                    </tr>
+					<tr>
+						{% for row in itemData %}
+                        <td>
+                            <img src={{ url_for('static', filename='uploads/' + row[3]) }} width="100%" height="300px" id="itemImage" />
+                        </td>
+                        {% endfor %}
+					</tr>
+					<tr>
+					{% for row in itemData %}
+                        <td>
+						<a class="btn btn-success" href="/productDescription?productId={{row[0]}}">
+                            {{row[5]}} Buy Now
+						<a>
+                        </td>
+                        {% endfor %}
+					</tr>
+                </table>
+                {% endfor %}
+				</div>
+				</div>
+        </div>
+		</div>
+		
+       
+    </div>
+{% endblock %}

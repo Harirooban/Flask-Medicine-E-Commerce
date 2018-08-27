@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log In</title>
+    <script src="{{ url_for('static', filename = 'js/jquery.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'back.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename = 'js/validateForm.js') }}"></script>
+    <link href="{{ url_for('static', filename = 'font-awesome-4.7.0/css/font-awesome.min.css') }} " rel="stylesheet">
+</head>
+
+<body id="bg3">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row" id="third">
+                <h1>Registration Page</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-5" id="four"></div>
+                <div class="col-sm-4" id="form">
+                    <div>
+                        <form action="/register" method="POST" onsubmit="return validate()">
+                            <center>
+                                <h2>R<span style="color:red">e</span>gister H<span style="color:red">e</span>re!</h2>
+                            </center>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="lastName" placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="E-Mail">
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Passord" id="password">
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="ecpassword" placeholder="Confirm Password" id="cpassword">
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-block">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row" id="second">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6">
+                    <h4>For Login
+                        <a class="btn btn-primary btn-md" style="color:white" href="/loginForm">Click Here</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
